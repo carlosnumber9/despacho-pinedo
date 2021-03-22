@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+
+:root {
+    --COLOR-1: #0C120C;
+    --COLOR-2: #B2FFA9;
+    --COLOR-3: #CBA328;
+    --COLOR-4: #6D7275;
+    --COLOR-5: #136F63;
+
+    --DEFAULT-SHADOW: 
+    0 1.2px 3.7px rgba(0, 0, 0, 0.028),
+    0 2.8px 8.9px rgba(0, 0, 0, 0.04),
+    0 5.3px 16.8px rgba(0, 0, 0, 0.05),
+    0 9.4px 29.9px rgba(0, 0, 0, 0.06),
+    0 17.5px 56px rgba(0, 0, 0, 0.072),
+    0 42px 134px rgba(0, 0, 0, 0.1);
+  
+}
+
+body {
+    font-family: 'Rufina', serif;
+    background-color: var(--COLOR-2);
+
+    color: var(--COLOR-1);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+
+    margin-top: 30px;
+    min-width: 30vw;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons {
+    margin: 5px;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button:hover {
+    color: var(--COLOR-3);
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+ }
+
+ input#background-button[type=checkbox]:checked ~ div#links {
+    display: none;
+ }
+
+ input#links-button[type=checkbox]:checked ~ div#background {
+    display: none;
+ }
+
+.section {
+    margin: 5px;
+    width: auto;
+
+    background-color: rgba(109, 114, 117, 0.8);
+
+    box-shadow: var(--DEFAULT-SHADOW);
+}
+
+#contact {
+    background-color: var(--COLOR-3);
+    min-height: 200px;
+}
+
+#background {
+    min-height: 500px;
+}
+
+#links {
+    min-height: 250px;
+}
