@@ -1,11 +1,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
 :root {
-    --COLOR-1: #0C120C;
+    --COLOR-1: rgba(106, 4, 29, 0.7);
     --COLOR-2: #B2FFA9;
     --COLOR-3: #CBA328;
-    --COLOR-4: #6D7275;
+    --COLOR-4: rgba(109, 114, 117, 0.8);
     --COLOR-5: #136F63;
 
     --DEFAULT-SHADOW: 
@@ -19,24 +52,24 @@
 }
 
 body {
-    font-family: 'Rufina', serif;
-    background-color: var(--COLOR-2);
-
-    color: var(--COLOR-1);
+    /* font-family: 'Rufina', serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Merriweather', serif;
+    background-color: var(--COLOR-5);
+    color: var(--COLOR-2);
 }
 
 #main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #content {
-
     margin-top: 30px;
-    min-width: 30vw;
+    max-width: 30vw;
     min-height: 50vh;
-
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +77,6 @@ body {
 #buttons {
     margin: 5px;
     width: auto;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,42 +86,239 @@ body {
 .button:hover {
     color: var(--COLOR-3);
     cursor: pointer;
-
     transition: all 0.2s ease-in-out;
 }
 
-input[type=checkbox] {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
- }
-
- input#background-button[type=checkbox]:checked ~ div#links {
-    display: none;
- }
-
- input#links-button[type=checkbox]:checked ~ div#background {
-    display: none;
- }
-
-.section {
+.div-default {
     margin: 5px;
     width: auto;
-
-    background-color: rgba(109, 114, 117, 0.8);
-
     box-shadow: var(--DEFAULT-SHADOW);
+}
+
+.section {
+    display: none;
+    background-color: var(--COLOR-1);
+
+    padding: 15px;
+
+    color: var(--COLOR-2);
+    font-size: 1.2em;
+    text-align: justify;
 }
 
 #contact {
     background-color: var(--COLOR-3);
     min-height: 200px;
+    min-width: 30vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.3rem;
+}
+
+#contact > * {
+    margin: 8px;
+}
+
+#contact a {
+    color: black;
+    text-decoration: none;
+}
+
+#numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#numbers * {
+    margin: 5px;
 }
 
 #background {
-    min-height: 500px;
+    min-height: 400px;
 }
 
 #links {
     min-height: 250px;
+}
+
+.career-era {
+    background-color: var(--COLOR-4);
+    padding: 5px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.career-era p {
+    margin: 5px;
+}
+
+.era-time {
+    background-color: var(--COLOR-3);
+    margin: 2px;
+    padding: 5px;
+    width: fit-content;
+    color: var(--COLOR-1);
+}
+
+#subtitle {
+    margin-top: 1px;
+    color: var(--COLOR-2);
+}
+
+#contact-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+
+    background-color: var(--COLOR-4);
+    box-shadow: var(--DEFAULT-SHADOW);
+
+    transition: all 0.5s ease-in-out;
+
+    background-image: url(../img/mail.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+#contact-button:hover {
+    background-color: var(--COLOR-1);
+
+    cursor: pointer;
+}
+
+#contact-form-container {
+    position: fixed;
+    display: none;
+    background-color: var(--COLOR-1);
+    width: 40vw;
+    height: 60vh;
+    right: 20px;
+    bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: var(--DEFAULT-SHADOW);
+  
+    border: 1px solid rgb(199, 199, 199);
+}
+
+#mail-sent-text {
+    display: none;
+    color: white;
+}
+
+#contact-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form * {
+    margin-top: 8px;
+    min-height: 30px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#close-contact-form {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#sending-icon {
+    display: none;
+    color: white;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
+
+  @media only screen and (min-width: 980px) {
+    #contact-form-container {
+        width: 40vw;
+        height: 60vh;
+    }
+
+    #subject {
+        width: 30vw;
+    }
+
+    #proposal {
+        width: 35vw;
+        height: 20vh;
+    }
+
+    #email {
+        width: 20vw;
+        min-width: 20vw;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 980px) {
+    #contact-form-container {
+        width: 60vw;
+        height: 60vh;
+    }
+
+    #subject {
+        width: 45vw;
+    }
+
+    #proposal {
+        width: 55vw;
+        height: 20vh;
+    }
+
+    #email {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-form-container {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    #subject {
+        width: 70vw;
+    }
+
+    #proposal {
+        width: 80vw;
+        height: 18vh;
+    }
+
+    #email {
+        width: 45vw;
+    }
+}
+
+input.empty-field {
+    border: 3px solid red;
+}
+
+textarea.empty-field {
+    border: 3px solid red;
+}
+
+input[type=submit] {
+    cursor: pointer;
 }

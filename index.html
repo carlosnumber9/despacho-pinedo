@@ -1,32 +1,129 @@
 <!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="css/index.css">
-    <title> despachopinedo </title>
-</head>
-<body>
-    <h1 id="name" align="center"> Carlos Pinedo Santamaría </h1>
-    <h3 id="subtitle" align="center"> Abogado </h3>
+<html lang="es">
+  <head>
+    <script src="https://use.fontawesome.com/ae4f0325fc.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Carlos Pinedo Santamaría</title>
+  </head>
+  <body>
     <div id="main">
-        <div id="content">
-            <div id="contact" class="section"></div>
-            <div id="buttons">
-
-                <!-- BACKGROUND BUTTON -->
-                <label for="background-button">
-                    <h2 class="button"> Trayectoria </h2>
-                </label>
-                <input type="checkbox" id="background-button">
-
-                <!-- LINKS BUTTON -->
-                <label for="links-button">
-                    <h2 class="button"> Enlaces </h2>
-                </label>
-                <input type="checkbox" id="links-button">
-
+      <h1 id="name">Carlos Pinedo Santamaría</h1>
+      <h2 id="subtitle">Abogado</h2>
+      <div id="content">
+        <div id="contact" class="div-default">
+          <div id="numbers">
+            <div id="home-number">
+              <a href="tel:913117423"> Fijo: 913117423 </a>
             </div>
-            <div id="background" class="section"></div>
-            <div id="links" class="section"></div>    
+            <div id="mobile-number">
+              <a href="tel:609125466"> Móvil: 609125466 </a>
+            </div>
+            <div id="fax-number">
+              <a href="fax:912184195"> Fax: 912184195 </a>
+            </div>
+          </div>
+          <div id="email-text">
+            <a href="mailto:carpinsan@telefonica.net">
+              carpinsan@telefonica.net
+            </a>
+          </div>
+          <div id="address">
+            <a href="https://goo.gl/maps/LDazUNYaT9mMvfpXA" target="_blank">
+              C/Rueza 36, 6ºB. 28011 Madrid
+            </a>
+          </div>
         </div>
+        <div id="buttons">
+          <h2 class="button" id="background-btn">Trayectoria</h2>
+          <h2 class="button" id="links-btn">Enlaces de interés</h2>
+        </div>
+        <div id="background" class="div-default section">
+          <div class="career-era">
+            <div class="era-time">ACTUALIDAD</div>
+            <p>
+              Ejerciente como abogado en el Ilustre Colegio de Abogados de
+              Madrid desde el año 1987.
+              <br />
+              Desde esa fecha vengo asistiendo a clientes a nivel judicial y
+              extrajudicial en todo tipo de asuntos Jurídicos, con despacho
+              propio en Madrid y Mallorca.
+            </p>
+            <p>
+              Colaborador de diversas entidades de asesoramiento FISCAL,
+              CONTABLE Y LABORAL españolas y alemanas.
+            </p>
+          </div>
+
+          <div class="career-era">
+            <div class="era-time">2004-2006</div>
+            <p>
+              Letrado del turno de oficio en sus especialidades laboral y civil,
+              tanto en el turno general (Procedimientos Ordinarios en Primera
+              Instancia y Recursos de Suplicación), como en el turno especial
+              (Recursos de Casación). Hasta febrero de 2.006.
+            </p>
+          </div>
+
+          <div class="career-era">
+            <div class="era-time">1999-2004</div>
+            <p>
+              Responsable jurídico de asesoría empresarial. Solicito mi baja en
+              dicha empresa en el mes de noviembre de 2.004.
+            </p>
+          </div>
+
+          <div class="career-era">
+            <div class="era-time">1999</div>
+            <p>
+              Letrado del Servicio de Orientación Jurídica del Excmo.
+              Ayuntamiento de Madrid. Finalizo mis servicios en el mes de
+              octubre de 1999.
+            </p>
+          </div>
+        </div>
+        <div id="links" class="div-default section"></div>
+      </div>
     </div>
-</body>
+    <div id="contact-button"></div>
+    <div id="contact-form-container">
+      <i
+        id="close-contact-form"
+        class="far fa-times-circle fa-lg"
+        onclick="closeContactWindow()"
+      ></i>
+      <h3 class="contact-title">REALIZA TU CONSULTA</h3>
+      <i id="sending-icon" class="fas fa-spinner fa-3x"></i>
+      <p id="mail-sent-text">
+        Gracias. Su mensaje será atendido a la mayor brevedad posible.
+      </p>
+      <form id="contact-form" action="javascript:submit()">
+        <input type="text" id="name" placeholder="Nombre completo*" value="" />
+        <input
+          type="tel"
+          id="number"
+          placeholder="Número de teléfono"
+          value=""
+          size="20"
+        />
+        <input type="email" id="email" placeholder="Dirección de correo" />
+        <input type="text" id="subject" placeholder="Asunto*" value="" />
+        <textarea
+          id="proposal"
+          placeholder="Escribe aquí tu consulta...*"
+        ></textarea>
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+  </body>
 </html>
