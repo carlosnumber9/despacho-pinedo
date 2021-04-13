@@ -104,9 +104,11 @@ body {
     color: var(--COLOR-2);
     font-size: 1.2em;
     text-align: justify;
+
+    transition: all 0.5s ease-in-out;
 }
 
-#contact {
+#personal-info {
     background-color: var(--COLOR-3);
     min-height: 200px;
     min-width: 30vw;
@@ -119,11 +121,11 @@ body {
     font-size: 1.3rem;
 }
 
-#contact > * {
+#personal-info > * {
     margin: 8px;
 }
 
-#contact a {
+#personal-info a {
     color: black;
     text-decoration: none;
 }
@@ -142,7 +144,7 @@ body {
     min-height: 400px;
 }
 
-#links {
+#contact {
     min-height: 250px;
 }
 
@@ -172,153 +174,7 @@ body {
     color: var(--COLOR-2);
 }
 
-#contact-button {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-
-    background-color: var(--COLOR-4);
-    box-shadow: var(--DEFAULT-SHADOW);
-
-    transition: all 0.5s ease-in-out;
-
-    background-image: url(../img/mail.png);
-    background-position: center;
-    background-size: 70%;
-    background-repeat: no-repeat;
-}
-
-#contact-button:hover {
-    background-color: var(--COLOR-1);
-
-    cursor: pointer;
-}
-
-#contact-form-container {
-    position: fixed;
-    display: none;
-    background-color: var(--COLOR-1);
-    width: 40vw;
-    height: 60vh;
-    right: 20px;
-    bottom: 20px;
-    flex-direction: column;
-    align-items: center;
-
-    box-shadow: var(--DEFAULT-SHADOW);
-  
-    border: 1px solid rgb(199, 199, 199);
-}
-
-#mail-sent-text {
-    display: none;
-    color: white;
-}
-
 #contact-form {
-    display: none;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#contact-form * {
-    margin-top: 8px;
-    min-height: 30px;
-    font-family: inherit;
-    font-weight: bold;
-}
-
-#close-contact-form {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    color: white;
-}
-
-#sending-icon {
-    display: none;
-    color: white;
-    -webkit-animation: rotating 2s linear infinite;
-    -moz-animation: rotating 2s linear infinite;
-    -ms-animation: rotating 2s linear infinite;
-    -o-animation: rotating 2s linear infinite;
-    animation: rotating 2s linear infinite;
-  }
-
-  @media only screen and (min-width: 980px) {
-    #contact-form-container {
-        width: 40vw;
-        height: 60vh;
-    }
-
-    #subject {
-        width: 30vw;
-    }
-
-    #proposal {
-        width: 35vw;
-        height: 20vh;
-    }
-
-    #email {
-        width: 20vw;
-        min-width: 20vw;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 980px) {
-    #contact-form-container {
-        width: 60vw;
-        height: 60vh;
-    }
-
-    #subject {
-        width: 45vw;
-    }
-
-    #proposal {
-        width: 55vw;
-        height: 20vh;
-    }
-
-    #email {
-        width: 35vw;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #contact-form-container {
-        width: 90vw;
-        height: 80vh;
-    }
-
-    #subject {
-        width: 70vw;
-    }
-
-    #proposal {
-        width: 80vw;
-        height: 18vh;
-    }
-
-    #email {
-        width: 45vw;
-    }
-}
-
-input.empty-field {
-    border: 3px solid red;
-}
-
-textarea.empty-field {
-    border: 3px solid red;
-}
-
-input[type=submit] {
-    cursor: pointer;
 }

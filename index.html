@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <script src="https://use.fontawesome.com/ae4f0325fc.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
     <script src="./js/index.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
@@ -16,12 +10,12 @@
     <link rel="stylesheet" href="css/index.css" />
     <title>Carlos Pinedo Santamaría</title>
   </head>
-  <body>
+  <div>
     <div id="main">
       <h1 id="name">Carlos Pinedo Santamaría</h1>
       <h2 id="subtitle">Abogado</h2>
       <div id="content">
-        <div id="contact" class="div-default">
+        <div id="personal-info" class="div-default">
           <div id="numbers">
             <div id="home-number">
               <a href="tel:913117423"> Fijo: 913117423 </a>
@@ -46,7 +40,7 @@
         </div>
         <div id="buttons">
           <h2 class="button" id="background-btn">Trayectoria</h2>
-          <h2 class="button" id="links-btn">Enlaces de interés</h2>
+          <h2 class="button" id="contact-btn">Contacto</h2>
         </div>
         <div id="background" class="div-default section">
           <div class="career-era">
@@ -92,38 +86,23 @@
             </p>
           </div>
         </div>
-        <div id="links" class="div-default section"></div>
+        <div id="contact" class="div-default section">
+          <form id="contact-form" action="javascript:submit()">
+            <input type="text" id="name" placeholder="Nombre completo*" value="" />
+            <input
+              type="tel"
+              id="number"
+              placeholder="Número de teléfono"
+              value=""
+              size="20"
+            />
+            <input type="email" id="email" placeholder="Dirección de correo" />
+            <input type="text" id="subject" placeholder="Asunto*" value="" />
+            <textarea id="proposal" placeholder="Escribe aquí tu consulta...*" ></textarea>
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
       </div>
-    </div>
-    <div id="contact-button"></div>
-    <div id="contact-form-container">
-      <i
-        id="close-contact-form"
-        class="far fa-times-circle fa-lg"
-        onclick="closeContactWindow()"
-      ></i>
-      <h3 class="contact-title">REALIZA TU CONSULTA</h3>
-      <i id="sending-icon" class="fas fa-spinner fa-3x"></i>
-      <p id="mail-sent-text">
-        Gracias. Su mensaje será atendido a la mayor brevedad posible.
-      </p>
-      <form id="contact-form" action="javascript:submit()">
-        <input type="text" id="name" placeholder="Nombre completo*" value="" />
-        <input
-          type="tel"
-          id="number"
-          placeholder="Número de teléfono"
-          value=""
-          size="20"
-        />
-        <input type="email" id="email" placeholder="Dirección de correo" />
-        <input type="text" id="subject" placeholder="Asunto*" value="" />
-        <textarea
-          id="proposal"
-          placeholder="Escribe aquí tu consulta...*"
-        ></textarea>
-        <input type="submit" value="Enviar" />
-      </form>
     </div>
   </body>
 </html>
