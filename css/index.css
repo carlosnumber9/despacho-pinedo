@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
 
 
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
@@ -178,3 +188,31 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+input {
+    margin-top: 10px;
+}
+
+input.empty-field {
+    border: 3px solid red;
+}
+
+textarea.empty-field {
+    border: 3px solid red;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+.loader {
+    border: 16px solid var(--COLOR-5);
+    border-radius: 50%;
+    border-top: 16px solid var(--COLOR-3);
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 1.3s linear infinite; /* Safari */
+    animation: spin 1.3s linear infinite;
+
+    display: none;
+  }

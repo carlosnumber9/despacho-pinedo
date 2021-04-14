@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/email.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +14,7 @@
   </head>
   <div>
     <div id="main">
-      <h1 id="name">Carlos Pinedo Santamaría</h1>
+      <h1 id="name-title">Carlos Pinedo Santamaría</h1>
       <h2 id="subtitle">Abogado</h2>
       <div id="content">
         <div id="personal-info" class="div-default">
@@ -87,6 +89,8 @@
           </div>
         </div>
         <div id="contact" class="div-default section">
+          <h3> Realiza tu consulta </h3>
+          <div id="loader"></div>
           <form id="contact-form" action="javascript:submit()">
             <input type="text" id="name" placeholder="Nombre completo*" value="" />
             <input

@@ -1,19 +1,31 @@
-function sendMail(mailInfo) {
-    var TOKEN = "4f546ef8-53a3-47d7-a3f8-a9204c81e283";
+
+
+
+const ADDRESEE = "cpinedocsb@gmail.com"; 
+const SENDER = "carlospinedoabogado@paginapersonal.com"; 
+
+
+
+
+
+
+function doSend(mailInfo) {
+    let TOKEN = "4f546ef8-53a3-47d7-a3f8-a9204c81e283";
+    let TOKEN2 = "61128f88-4409-47de-ad94-0649242773e7";
     Email.send({
       SecureToken: TOKEN,
-      To: "cpinedocsb@gmail.com",
-      From: "carlospinedoabogado@paginapersonal.com",
+      To: ADDRESEE,
+      From: SENDER,
       Subject: "Nueva consulta: " + mailInfo.subject,
       Body: getEmailMessage(mailInfo),
     }).then((message) => {
       if (message === "OK") {
         console.debug("Mail sent succesfully.");
-        $("#sending-icon")
+        document.querySelector("#sending-icon")
           .fadeOut(100)
           .promise()
           .done(() => {
-            $("#mail-sent-text").fadeIn();
+            document.querySelector("#mail-sent-text").fadeIn();
           });
       } else console.error(message);
     });
@@ -43,12 +55,12 @@ function getEmailMessage(mailInfo) {
 
 
   
-function submit() {
-    var nameSelector = $("#" + CONTACT_FIELDS.NAME);
-    var numberSelector = $("#" + CONTACT_FIELDS.TELEPHONE);
-    var emailSelector = $("#" + CONTACT_FIELDS.EMAIL);
-    var subjectSelector = $("#" + CONTACT_FIELDS.SUBJECT);
-    var proposalSelector = $("#" + CONTACT_FIELDS.PROPOSAL);
+function sendEmail() {
+    var nameSelector = document.querySelector("#" + CONTACT_FIELDS.NAME).value;
+    var numberSelector = document.querySelector("#" + CONTACT_FIELDS.TELEPHONE);
+    var emailSelector = document.querySelector("#" + CONTACT_FIELDS.EMAIL);
+    var subjectSelector = document.querySelector("#" + CONTACT_FIELDS.SUBJECT);
+    var proposalSelector = document.querySelector("#" + CONTACT_FIELDS.PROPOSAL);
   
     var name = nameSelector.val();
     var subject = subjectSelector.val();
@@ -59,11 +71,11 @@ function submit() {
     notifyEmptyField("name");
   
     if (name && subject && proposal && (number || email)) {
-      $("#contact-form")
+      document.querySelector("#contact-form")
         .fadeOut(200)
         .promise()
         .done(() => {
-          $("#sending-icon")
+          document.querySelector("#sending-icon")
             .fadeIn(100)
             .promise()
             .done(() => {
@@ -75,7 +87,7 @@ function submit() {
                 proposal: proposal,
               };
   
-              sendMail(mailInfo);
+              doSend(mailInfo);
             });
         });
     } else {
@@ -93,14 +105,4 @@ function submit() {
   }
 
 
-  
-function notifyEmptyField(field) {
-    var field = $("#" + field);
-    var interval = setInterval(() => {
-      field.toggleClass("empty-field");
-    }, 200);
-    setTimeout(() => {
-      clearInterval(interval);
-      field.removeClass("empty-field");
-    }, 3000);
-  }
+  export { doSend as sendEmail };
