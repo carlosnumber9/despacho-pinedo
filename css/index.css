@@ -138,7 +138,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.button {
+    margin-right: 45px;
 }
 
 .button:hover {
