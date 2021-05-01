@@ -111,7 +111,7 @@ body {
     }
 
     #personal-info {
-        width: 350px;
+        width: 280px;
         margin: 0px auto;
     }
     p {
@@ -120,6 +120,10 @@ body {
 
     #name-title {
         font-size: 1.5em;
+    }
+
+    #address {
+        font-size: 0.8em;
     }
   }
 
@@ -141,14 +145,18 @@ body {
     justify-content: center;
 }
 
-.button {
-    margin-right: 45px;
-}
-
 .button:hover {
     color: var(--COLOR-3);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+}
+
+#background-btn {
+    margin-right: 20px;
+}
+
+#contact-btn {
+    margin-left: 20px;
 }
 
 .div-default {
