@@ -67,6 +67,8 @@ body {
     font-family: 'Merriweather', serif;
     background-color: var(--COLOR-5);
     color: var(--COLOR-2);
+
+    overflow-y: scroll;
 }
 
 #main {
@@ -76,12 +78,64 @@ body {
 
 }
 
+@media only screen and (min-width: 980px) {
+    #content {
+        max-width: 800px;
+    }
+
+    #personal-info {
+        width: 600px;
+        margin: 0px auto;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    #name-title {
+        font-size: 2.5em;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 980px) {
+    #content {
+        max-width: 590px;
+    }
+
+    #personal-info {
+        width: 550px;
+        margin: 0px auto;
+    }
+    p {
+        font-size: 0.9em;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #content {
+        max-width: 90vw;
+    }
+
+    #personal-info {
+        width: 350px;
+        margin: 0px auto;
+    }
+    p {
+        font-size: 0.8em;
+    }
+
+    #name-title {
+        font-size: 1.5em;
+    }
+  }
+
 #content {
     margin-top: 30px;
-    max-width: 30vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
+
+    flex-grow: 3;
 }
 
 #buttons {
@@ -121,7 +175,6 @@ body {
 #personal-info {
     background-color: var(--COLOR-3);
     min-height: 200px;
-    min-width: 30vw;
 
     display: flex;
     justify-content: center;
@@ -144,6 +197,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
 }
 
 #numbers * {
