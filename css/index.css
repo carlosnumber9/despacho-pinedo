@@ -253,10 +253,20 @@ body {
 
 input {
     margin-top: 10px;
+    min-width: 200px;
+    max-width: 350px;
+    padding: 5px;
+    font-family: 'Lora', serif;
 }
 
 input.empty-field {
     border: 3px solid red;
+}
+
+textarea {
+    font-family: 'Lora', serif;
+    min-width: 250px;
+    margin-top: 10px;
 }
 
 textarea.empty-field {
@@ -265,6 +275,8 @@ textarea.empty-field {
 
 input[type=submit] {
     cursor: pointer;
+    background-color: var(--COLOR-3);
+    font-weight: bold;
 }
 
 .loader {
