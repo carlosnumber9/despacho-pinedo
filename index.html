@@ -2,9 +2,9 @@
 <html lang="es">
   <head>
     <script type="module" src="./js/index.js"></script>
-    <script type="module" src="./js/email.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
+  <script type="module" src="./js/contactForm.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,25 +88,17 @@
             </p>
           </div>
         </div>
-        <div id="contact" class="div-default section">
-          <h3> Realiza tu consulta </h3>
-          <div id="loader"></div>
-          <form id="contact-form" action="javascript:submit()">
-            <input type="text" id="name" placeholder="Nombre completo*" value="" />
-            <input
-              type="tel"
-              id="number"
-              placeholder="Número de teléfono"
-              value=""
-              size="20"
-            />
-            <input type="email" id="email" placeholder="Dirección de correo" />
-            <input type="text" id="subject" placeholder="Asunto*" value="" />
-            <textarea id="proposal" placeholder="Escribe aquí tu consulta...*" rows="12"></textarea>
-            <input type="submit" value="Enviar" />
-          </form>
-        </div>
+      <div id="contact" class="div-default section">
+        <h3> Realiza tu consulta </h3>
+        <div id="loader"></div>
+        <form id="contact-form" action="javascript:submit()">
+          <input type="text" id="name" placeholder="Nombre completo*" value="" />
+          <input type="tel" id="number" placeholder="Número de teléfono" value="" size="20" />
+          <input type="email" id="email" placeholder="Dirección de correo" />
+          <input type="text" id="subject" placeholder="Asunto*" value="" />
+          <textarea id="proposal" placeholder="Escribe aquí tu consulta...*" rows="12"></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
       </div>
-    </div>
   </body>
 </html>
