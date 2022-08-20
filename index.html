@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <script type="module" src="./js/index.js"></script>
+
+<head>
+  <script type="module" src="./js/sections.js"></script>
   <script type="module" src="./js/contactForm.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script src="https://use.fontawesome.com/8d80186918.js"></script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="shortcut icon" type="image/svg" href="./favicon.svg"/>
-    <title>Carlos Pinedo Santamaría</title>
-  </head>
-  <div>
-    <div id="main">
-      <h1 id="name-title">Carlos Pinedo Santamaría</h1>
-      <h2 id="subtitle">Abogado</h2>
-      <div id="content">
-        <div id="personal-info" class="div-default">
-          <div id="numbers">
-            <div id="home-number">
-              <a href="tel:913117423"> Fijo: 913117423 </a>
-            </div>
-            <div id="mobile-number">
-              <a href="tel:609125466"> Móvil: 609125466 </a>
-            </div>
-            <div id="fax-number">
-              <a href="fax:912184195"> Fax: 912184195 </a>
-            </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/svg" href="./favicon.svg" />
+  <!--load all Font Awesome styles -->
+  <link href="/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Carlos Pinedo Santamaría</title>
+</head>
+<div>
+  <div id="main">
+    <h1 id="name-title">Carlos Pinedo Santamaría</h1>
+    <h2 id="subtitle">Abogado</h2>
+    <div id="content">
+      <div id="personal-info" class="div-default">
+        <div id="numbers">
+          <div id="home-number">
+            <a href="tel:913117423"> Fijo: 913117423 </a>
           </div>
-          <div id="email-text">
-            <a href="mailto:carpinsan@telefonica.net">
-              carpinsan@telefonica.net
-            </a>
+          <div id="mobile-number">
+            <a href="tel:609125466"> Móvil: 609125466 </a>
           </div>
-          <div id="address">
-            <a href="https://goo.gl/maps/LDazUNYaT9mMvfpXA" target="_blank">
-              C/Rueza 36, 6ºB. 28011 Madrid
-            </a>
+          <div id="fax-number">
+            <a href="fax:912184195"> Fax: 912184195 </a>
           </div>
         </div>
-        <div id="buttons">
-          <h2 class="button" id="background-btn">Trayectoria</h2>
-          <h2 class="button" id="contact-btn">Contacto</h2>
+        <div id="email-text">
+          <a href="mailto:carpinsan@telefonica.net">
+            carpinsan@telefonica.net
+          </a>
         </div>
-        <div id="background" class="div-default section">
-          <div class="career-era">
-            <div class="era-time"><strong>ACTUALIDAD</strong></div>
-            <p>
-              Ejerciente como abogado en el Ilustre Colegio de Abogados de
-              Madrid desde el año 1987.
-              <br />
-              Desde esa fecha vengo asistiendo a clientes a nivel judicial y
-              extrajudicial en todo tipo de asuntos Jurídicos, con despacho
-              propio en Madrid y Mallorca.
-            </p>
-            <p>
-              Colaborador de diversas entidades de asesoramiento <strong> fiscal, contable y laboral </strong> españolas y alemanas.
-            </p>
-          </div>
-
-          <div class="career-era">
-            <div class="era-time"><strong>2004-2006</strong></div>
-            <p>
-              Letrado del turno de oficio en sus especialidades <strong>laboral y civil</strong>,
-              tanto en el turno general (Procedimientos Ordinarios en Primera
-              Instancia y Recursos de Suplicación), como en el turno especial
-              (Recursos de Casación). Hasta febrero de 2006.
-            </p>
-          </div>
-
-          <div class="career-era">
-            <div class="era-time"><strong>1999-2004</strong></div>
-            <p>
-              Responsable jurídico de <strong>asesoría empresarial</strong>. Solicito mi baja en
-              dicha empresa en el mes de noviembre de 2004.
-            </p>
-          </div>
-
-          <div class="career-era">
-            <div class="era-time"><strong>1999</strong></div>
-            <p>
-              Letrado del Servicio de Orientación Jurídica del Excmo.
-              Ayuntamiento de Madrid. Finalizo mis servicios en el mes de
-              octubre.
-            </p>
-          </div>
+        <div id="address">
+          <a href="https://goo.gl/maps/LDazUNYaT9mMvfpXA" target="_blank">
+            C/Rueza 36, 6ºB. 28011 Madrid
+          </a>
         </div>
+      </div>
+      <div id="buttons">
+        <div id="present-btn">
+          <h2 class="button btn-text">Actualidad</h2>
+          <em class="fa-solid fa-glasses fa-xl button btn-icon"></em>    
+        </div>
+        <div id="background-btn">
+          <h2 class="button btn-text">Trayectoria</h2>
+          <em class="fa-solid fa-briefcase fa-xl button btn-icon"></em>  
+        </div>
+        <div id="contact-btn">
+          <h2 class="button btn-text">Contacto</h2>
+          <em class="fa-solid fa-handshake fa-xl button btn-icon"></em>  
+        </div>
+        </div>
+      <div id="present" class="div-default section">
+        <div class="career-era">
+          <p>
+            Ejerciente como abogado, asistiendo a clientes a nivel judicial y
+            extrajudicial en todo tipo de asuntos Jurídicos, con despacho
+            propio en Madrid y Mallorca.
+          </p>
+          <p>
+            Colaborador de diversas entidades de asesoramiento <strong> fiscal, contable y laboral </strong> españolas y
+            alemanas.
+          </p>
+        </div>
+      </div>
+      <div id="background" class="div-default section">
+        <div class="career-era">
+          <div class="era-time"><strong>2004-2006</strong></div>
+          <p>
+            Letrado del turno de oficio en sus especialidades <strong>laboral y civil</strong>,
+            tanto en el turno general (Procedimientos Ordinarios en Primera
+            Instancia y Recursos de Suplicación), como en el turno especial
+            (Recursos de Casación). Hasta febrero de 2006.
+          </p>
+        </div>
+
+        <div class="career-era">
+          <div class="era-time"><strong>1999-2004</strong></div>
+          <p>
+            Responsable jurídico de <strong>asesoría empresarial</strong>. Solicito mi baja en
+            dicha empresa en el mes de noviembre de 2004.
+          </p>
+        </div>
+
+        <div class="career-era">
+          <div class="era-time"><strong>1999</strong></div>
+          <p>
+            Letrado del Servicio de Orientación Jurídica del Excmo.
+            Ayuntamiento de Madrid. Finalizo mis servicios en el mes de
+            octubre.
+          </p>
+        </div>
+
+        <div class="career-era">
+          <div class="era-time"><strong>1987</strong></div>
+          <p>
+            Colegiación en Ilustre Colegio de Abogados de Madrid.
+          </p>
+        </div>
+      </div>
       <div id="contact" class="div-default section">
         <h3> Realiza tu consulta </h3>
         <div id="loader"></div>
@@ -100,5 +120,8 @@
           <input type="submit" value="Enviar" />
         </form>
       </div>
+    </div>
+  </div>
   </body>
+
 </html>

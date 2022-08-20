@@ -89,6 +89,10 @@ body {
     #name-title {
         font-size: 2.5em;
     }
+
+    .btn-icon {
+        display: none;
+    }
   }
   
   @media only screen and (min-width: 600px) and (max-width: 980px) {
@@ -102,6 +106,10 @@ body {
     }
     p {
         font-size: 0.9em;
+    }
+
+    .btn-icon {
+        display: none;
     }
   }
   
@@ -125,10 +133,17 @@ body {
     #address {
         font-size: 0.8em;
     }
+
+    .btn-text {
+        display: none;
+    }
+
+    .btn-icon {
+        margin: 30px 10px 30px 10px;
+    }
   }
 
 #content {
-    margin-top: 30px;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -153,14 +168,10 @@ body {
 
 #background-btn {
     margin-right: 20px;
-}
-
-#contact-btn {
     margin-left: 20px;
 }
 
 .div-default {
-    margin: 5px;
     width: auto;
     box-shadow: var(--DEFAULT-SHADOW);
 }
@@ -227,6 +238,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .career-era p {
