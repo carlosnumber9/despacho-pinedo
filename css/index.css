@@ -285,20 +285,19 @@ textarea.empty-field {
     border: 3px solid red;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
     cursor: pointer;
     background-color: var(--COLOR-3);
     font-weight: bold;
 }
 
-.loader {
-    border: 16px solid var(--COLOR-5);
-    border-radius: 50%;
-    border-top: 16px solid var(--COLOR-3);
-    width: 80px;
-    height: 80px;
-    -webkit-animation: spin 1.3s linear infinite; /* Safari */
-    animation: spin 1.3s linear infinite;
-
+#loader {
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
     display: none;
+    margin-top: 40px;
   }
+
+#request-ok, #request-ko {
+    display: none;
+}
