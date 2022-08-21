@@ -43,7 +43,7 @@ const notifyEmptyFields = (fields) =>
 function validate(mailInfo) {
   if (necessaryInfoIsFilled(mailInfo)) {
     fadeOut("contact-form");
-    fadeIn("loader", "unset");
+    fadeIn("loader");
     return true;
   } else {
     console.error("Must complete form info first.");
