@@ -17,10 +17,12 @@ export const showSection = (sectionToShow) =>
 
 export const fadeOut = (section) => {
   const element = document.querySelector("#" + section);
+  if (element.classList.contains("visible")) element.classList.remove("visible");
   if (!element.classList.contains("hidden")) element.classList.add("hidden");
 };
 
 export const fadeIn = (section) => {
   const element = document.querySelector("#" + section);
   if (element.classList.contains("hidden")) element.classList.remove("hidden");
+  if (!element.classList.contains("visible")) element.classList.add("visible");
 };

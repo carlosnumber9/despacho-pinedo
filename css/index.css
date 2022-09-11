@@ -106,7 +106,7 @@ body {
     }
 
     .btn-icon {
-        visibility: hidden;
+        display:none;
     }
 }
 
@@ -125,7 +125,7 @@ body {
     }
 
     .btn-icon {
-        visibility: hidden;
+        display:none;
     }
 }
 
@@ -152,7 +152,7 @@ body {
     }
 
     .btn-text {
-        visibility: hidden;
+        display:none;
     }
 
     .btn-icon {
@@ -194,7 +194,6 @@ body {
 }
 
 .section {
-    visibility: hidden;
     background-color: var(--COLOR-1);
 
     padding: 15px;
@@ -203,11 +202,11 @@ body {
     font-size: 1.2em;
     text-align: justify;
 
-    -webkit-transition: visibility 0.3s ease-in-out;
-    -moz-transition: visibility 0.3s ease-in-out;
-    -ms-transition: visibility 0.3s ease-in-out;
-    -o-transition: visibility 0.3s ease-in-out;
-    transition: visibility 0.3 ease-in-out;
+    -webkit-transition: display 0.3s ease-in-out;
+    -moz-transition: display 0.3s ease-in-out;
+    -ms-transition: display 0.3s ease-in-out;
+    -o-transition: display 0.3s ease-in-out;
+    transition: display 0.3 ease-in-out;
 }
 
 #personal-info {
@@ -307,7 +306,7 @@ textarea.empty-field {
 }
 
 input[type=submit],
-input[type=button] {
+.reset-form-btn {
     cursor: pointer;
     background-color: var(--COLOR-3);
     font-weight: bold;
@@ -317,21 +316,27 @@ input[type=button] {
     -webkit-animation: spin 2s linear infinite;
     /* Safari */
     animation: spin 2s linear infinite;
-    visibility: hidden;
+    display:none;
     margin-top: 40px;
 
-    -webkit-transition: visibility 0.3s ease-in-out;
-    -moz-transition: visibility 0.3s ease-in-out;
-    -ms-transition: visibility 0.3s ease-in-out;
-    -o-transition: visibility 0.3s ease-in-out;
-    transition: visibility 0.3 ease-in-out;
+    -webkit-transition: display 0.3s ease-in-out;
+    -moz-transition: display 0.3s ease-in-out;
+    -ms-transition: display 0.3s ease-in-out;
+    -o-transition: display 0.3s ease-in-out;
+    transition: display 0.3 ease-in-out;
 }
 
 #request-ok,
 #request-ko {
-    visibility: hidden;
+    display:none;
 }
 
 .hidden {
-    visibility: hidden;
+    display:none;
+}
+
+.visible {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
