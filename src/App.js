@@ -6,8 +6,6 @@ import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as emailJS from '@emailjs/browser';
 
-const PUBLIC_KEY = 'HwmI6C4bzu7qcXn3y';
-
 export const SECTIONS = {
   PRESENT: {
     path: '/',
@@ -30,7 +28,7 @@ export const SECTIONS = {
 };
 
 function App() {
-  emailJS.init(PUBLIC_KEY);
+  emailJS.init(process.env.PUBLIC_KEY);
   return (
     <div className="App">
       <div id="main">
