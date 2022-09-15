@@ -325,18 +325,3 @@ input[type=submit],
     -o-transition: display 0.3s ease-in-out;
     transition: display 0.3 ease-in-out;
 }
-
-#request-ok,
-#request-ko {
-    display:none;
-}
-
-.hidden {
-    display:none;
-}
-
-.visible {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}

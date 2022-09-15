@@ -13,5 +13,5 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
     "quotes": [2, "single", "avoid-escape"]
   },
-  "env": { "browser": true }
+  "env": { "browser": true, "node": true }
 }
