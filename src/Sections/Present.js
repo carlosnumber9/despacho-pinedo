@@ -13,5 +13,5 @@ export const Present = () => (
         <strong> fiscal, contable y laboral </strong> españolas y alemanas.
       </p>
     </div>
-    </FadeWrapper>
+  </FadeWrapper>
 );
