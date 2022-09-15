@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
 import { send as sendMail } from '@emailjs/browser';
 import { useState } from 'react';
 import { Success } from './Success';
 import { Error } from './Error';
+import { FadeWrapper } from '../../FadeWrapper';
 
 const LOAD_STATE = {
   NONE: 'NONE',
@@ -53,11 +53,7 @@ export const Contact = () => {
   };
 
   return (
-    <motion.div
-      exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
+    <FadeWrapper>
       <div className="career-era">
         {loadState === LOAD_STATE.NONE && (
           <>
@@ -131,6 +127,6 @@ export const Contact = () => {
           <Error onResetForm={resetForm}></Error>
         )}
       </div>
-    </motion.div>
+    </FadeWrapper>
   );
 };

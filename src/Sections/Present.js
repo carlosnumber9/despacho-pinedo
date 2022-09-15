@@ -1,11 +1,7 @@
-import { motion } from 'framer-motion';
+import { FadeWrapper } from '../FadeWrapper';
 
 export const Present = () => (
-  <motion.div
-    exit={{ opacity: 0 }}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-  >
+  <FadeWrapper>
     <div className="career-era">
       <p>
         Ejerciente como abogado, asistiendo a clientes a nivel judicial y
@@ -17,5 +13,5 @@ export const Present = () => (
         <strong> fiscal, contable y laboral </strong> españolas y alemanas.
       </p>
     </div>
-  </motion.div>
+    </FadeWrapper>
 );
