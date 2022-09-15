@@ -1,7 +1,6 @@
 import { send as sendMail } from '@emailjs/browser';
 import { useState } from 'react';
-import { Success } from './Success';
-import { Error } from './Error';
+import { Success, Error } from '.';
 import { FadeWrapper } from '../../FadeWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
