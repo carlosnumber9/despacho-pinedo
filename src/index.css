@@ -316,7 +316,6 @@ input[type=submit],
     -webkit-animation: spin 2s linear infinite;
     /* Safari */
     animation: spin 2s linear infinite;
-    display:none;
     margin-top: 40px;
 
     -webkit-transition: display 0.3s ease-in-out;

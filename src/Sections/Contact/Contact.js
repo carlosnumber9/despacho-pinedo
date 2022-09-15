@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Success } from './Success';
 import { Error } from './Error';
 import { FadeWrapper } from '../../FadeWrapper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const LOAD_STATE = {
   NONE: 'NONE',
@@ -23,28 +25,34 @@ export const Contact = () => {
   const [mailInfo, setMailInfo] = useState(DEFAULT_MAIL_INFO);
   const [loadState, setLoadState] = useState(LOAD_STATE.NONE);
 
+  const handleSendError = (error) => {
+    console.error(error);
+    setLoadState(LOAD_STATE.ERROR);
+    return true;
+  };
+
   const submit = (e) => {
     e.preventDefault();
     setLoadState(LOAD_STATE.LOADING);
-    sendMail(
-      process.env.SERVICE_ID,
-      process.env.TEMPLATE_ID,
-      mailInfo,
-      process.env.PUBLIC_KEY
-    ).then(
-      (result) => {
-        console.info(
-          `Request was sent succesfully. (${result.status}  ${result.text})`
-        );
-        setLoadState(LOAD_STATE.SUCCESS);
-        return true;
-      },
-      (error) => {
-        console.error(error);
-        setLoadState(LOAD_STATE.ERROR);
-        return true;
-      }
-    );
+    try {
+      sendMail(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        mailInfo,
+        process.env.PUBLIC_KEY
+      ).then(
+        (result) => {
+          console.info(
+            `Request was sent succesfully. (${result.status}  ${result.text})`
+          );
+          setLoadState(LOAD_STATE.SUCCESS);
+          return true;
+        },
+        (error) => handleSendError(error)
+      );
+    } catch (error) {
+      handleSendError(error);
+    }
   };
 
   const resetForm = () => {
@@ -116,7 +124,7 @@ export const Contact = () => {
         )}
 
         {loadState === LOAD_STATE.LOADING && (
-          <em id="loader" className="fa-solid fa-hand-holding-hand fa-2xl"></em>
+          <FontAwesomeIcon icon={faSpinner} id="loader" size="4x" />
         )}
 
         {loadState === LOAD_STATE.SUCCESS && (
