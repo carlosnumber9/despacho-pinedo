@@ -123,15 +123,21 @@ export const Contact = () => {
         )}
 
         {loadState === LOAD_STATE.LOADING && (
-          <FontAwesomeIcon icon={faSpinner} id="loader" size="4x" />
+          <FadeWrapper>
+            <FontAwesomeIcon icon={faSpinner} id="loader" size="4x" />
+          </FadeWrapper>
         )}
 
         {loadState === LOAD_STATE.SUCCESS && (
-          <Success onResetForm={resetForm}></Success>
+          <FadeWrapper>
+            <Success onResetForm={resetForm}></Success>
+          </FadeWrapper>
         )}
 
         {loadState === LOAD_STATE.ERROR && (
-          <Error onResetForm={resetForm}></Error>
+          <FadeWrapper>
+            <Error onResetForm={resetForm}></Error>
+          </FadeWrapper>
         )}
       </div>
     </FadeWrapper>
