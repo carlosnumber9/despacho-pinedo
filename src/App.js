@@ -6,14 +6,13 @@ import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as emailJS from '@emailjs/browser';
 import { PUBLIC_KEY, SECTIONS } from './constants';
+import { BackgroundBars } from './BackgroundBars';
 
 function App() {
   emailJS.init(PUBLIC_KEY);
   return (
     <div className="App">
-      <div id='bg-bar-1' className='bg-bar'></div>
-      <div id='bg-bar-2' className='bg-bar'></div>
-      <div id='bg-bar-3' className='bg-bar'></div>
+      <BackgroundBars />
       <div id="main">
         <h1 id="name-title">Carlos Pinedo Santamaría</h1>
         <h2 id="subtitle">Abogado</h2>
