@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Prata&display=swap');
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -56,12 +56,29 @@
     }
 }
 
+
+@keyframes bg-bar-move {
+    0% {
+      left: 0;
+    }
+
+    50% {
+        left: 150vw;
+    }
+  
+    to {
+      left: 0;
+    }
+  }
+
 :root {
     --COLOR-1: rgba(106, 4, 29, 0.7);
-    --COLOR-2: #B2FFA9;
+    --COLOR-2: #DEE2E6;
     --COLOR-3: #CBA328;
-    --COLOR-4: rgba(109, 114, 117, 0.8);
-    --COLOR-5: #136F63;
+    --COLOR-4: #343A40;
+    --COLOR-5: #212529;
+    --COLOR-6: #495057;
+    --COLOR-7: #6C757D;
 
     --DEFAULT-SHADOW:
         0 1.2px 3.7px rgba(0, 0, 0, 0.028),
@@ -74,7 +91,8 @@
 }
 
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Noto Sans', sans-serif;
+
     background-color: var(--COLOR-5);
     color: var(--COLOR-2);
 
@@ -106,7 +124,7 @@ body {
     }
 
     .btn-icon {
-        display:none;
+        display: none;
     }
 }
 
@@ -125,7 +143,7 @@ body {
     }
 
     .btn-icon {
-        display:none;
+        display: none;
     }
 }
 
@@ -152,7 +170,7 @@ body {
     }
 
     .btn-text {
-        display:none;
+        display: none;
     }
 
     .btn-icon {
@@ -178,9 +196,12 @@ body {
 }
 
 .button:hover {
-    color: var(--COLOR-3);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+}
+
+.button.selected, .button:hover {
+    color: var(--COLOR-3);
 }
 
 #background-btn {
@@ -226,7 +247,7 @@ body {
 }
 
 #personal-info a {
-    color: black;
+    color: var(--COLOR-5);
     text-decoration: none;
 }
 
@@ -259,6 +280,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    box-shadow: var(--DEFAULT-SHADOW);
 }
 
 .career-era p {
@@ -271,6 +294,12 @@ body {
     padding: 5px;
     width: fit-content;
     color: var(--COLOR-1);
+}
+
+#name-title,
+#subtitle,
+.button {
+    font-family: 'Prata', serif;
 }
 
 #subtitle {
@@ -288,7 +317,7 @@ input {
     min-width: 200px;
     max-width: 350px;
     padding: 5px;
-    font-family: 'Lora', serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 input.empty-field {
@@ -296,7 +325,7 @@ input.empty-field {
 }
 
 textarea {
-    font-family: 'Lora', serif;
+    font-family: 'Noto Sans', sans-serif;
     min-width: 250px;
     margin-top: 10px;
 }
@@ -323,4 +352,32 @@ input[type=submit],
     -ms-transition: display 0.3s ease-in-out;
     -o-transition: display 0.3s ease-in-out;
     transition: display 0.3 ease-in-out;
+}
+
+.bg-bar {
+    position: absolute;
+    z-index: -99;
+
+    top: -50%;
+
+    width: 10vw;
+    height: 200vh;
+    transform: rotate(15deg);
+
+    overflow: hidden;
+}
+
+#bg-bar-1 {
+    background-color: var(--COLOR-4);
+    animation: bg-bar-move 50s infinite;
+}
+
+#bg-bar-2 {
+    background-color: var(--COLOR-6);
+    animation: bg-bar-move 55s infinite;
+}
+
+#bg-bar-3 {
+    background-color: rgb(47, 47, 47);
+    animation: bg-bar-move 60s infinite;
 }
