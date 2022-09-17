@@ -1,0 +1,68 @@
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    margin-top: 40px;
+
+    -webkit-transition: display 0.3s ease-in-out;
+    -moz-transition: display 0.3s ease-in-out;
+    -ms-transition: display 0.3s ease-in-out;
+    -o-transition: display 0.3s ease-in-out;
+    transition: display 0.3 ease-in-out;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 10px;
+    min-width: 200px;
+    max-width: 350px;
+    padding: 5px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input.empty-field {
+    border: 3px solid red;
+}
+
+textarea {
+    font-family: 'Noto Sans', sans-serif;
+    min-width: 250px;
+    margin-top: 10px;
+}
+
+textarea.empty-field {
+    border: 3px solid red;
+}
+
+input[type=submit],
+.reset-form-btn {
+    cursor: pointer;
+    background-color: var(--COLOR-3);
+    font-weight: bold;
+}
+

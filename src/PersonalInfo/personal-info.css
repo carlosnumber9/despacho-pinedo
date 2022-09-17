@@ -1,0 +1,58 @@
+@media only screen and (min-width: 980px) {
+    #personal-info {
+        width: 600px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 980px) {
+    #personal-info {
+        width: 550px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #personal-info {
+        width: 280px;
+        margin: 0px auto;
+    }
+
+    #address {
+        font-size: 0.8em;
+    }
+}
+
+#personal-info {
+    background-color: var(--COLOR-3);
+    min-height: 200px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.3rem;
+}
+
+#personal-info>* {
+    margin: 8px;
+}
+
+#personal-info a {
+    color: var(--COLOR-5);
+    text-decoration: none;
+}
+
+#numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+#numbers * {
+    margin: 5px;
+}

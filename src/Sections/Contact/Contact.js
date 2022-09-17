@@ -1,3 +1,4 @@
+import './contact.css';
 import { send as sendMail } from '@emailjs/browser';
 import { useState } from 'react';
 import { Success, Error } from '.';

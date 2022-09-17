@@ -1,61 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Prata&display=swap');
 
-/* Safari */
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes rotating
-
-/* Safari and Chrome */
-    {
-    from {
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    to {
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotating {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
 :root {
     --COLOR-1: rgba(106, 4, 29, 0.7);
     --COLOR-2: #DEE2E6;
@@ -95,21 +39,12 @@ body {
         max-width: 800px;
     }
 
-    #personal-info {
-        width: 600px;
-        margin: 0px auto;
-    }
-
     p {
         font-size: 1.1em;
     }
 
     #name-title {
         font-size: 2.5em;
-    }
-
-    .btn-icon {
-        display: none;
     }
 }
 
@@ -118,28 +53,14 @@ body {
         max-width: 590px;
     }
 
-    #personal-info {
-        width: 550px;
-        margin: 0px auto;
-    }
-
     p {
         font-size: 0.9em;
-    }
-
-    .btn-icon {
-        display: none;
     }
 }
 
 @media only screen and (max-width: 600px) {
     #content {
         max-width: 90vw;
-    }
-
-    #personal-info {
-        width: 280px;
-        margin: 0px auto;
     }
 
     p {
@@ -149,18 +70,6 @@ body {
     #name-title {
         font-size: 1.5em;
     }
-
-    #address {
-        font-size: 0.8em;
-    }
-
-    .btn-text {
-        display: none;
-    }
-
-    .btn-icon {
-        margin: 30px 10px 30px 10px;
-    }
 }
 
 #content {
@@ -169,29 +78,6 @@ body {
     flex-direction: column;
 
     flex-grow: 3;
-}
-
-#buttons {
-    margin: 5px;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.button:hover {
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.selected-section, .button:hover {
-    color: var(--COLOR-3);
-}
-
-#background-btn {
-    margin-right: 20px;
-    margin-left: 20px;
 }
 
 .div-default {
@@ -215,46 +101,8 @@ body {
     transition: display 0.3 ease-in-out;
 }
 
-#personal-info {
-    background-color: var(--COLOR-3);
-    min-height: 200px;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    font-size: 1.3rem;
-}
-
-#personal-info>* {
-    margin: 8px;
-}
-
-#personal-info a {
-    color: var(--COLOR-5);
-    text-decoration: none;
-}
-
-#numbers {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-}
-
-#numbers * {
-    margin: 5px;
-}
-
 #background {
     min-height: 400px;
-}
-
-#contact {
-    min-height: 250px;
 }
 
 .career-era {
@@ -290,51 +138,4 @@ body {
 #subtitle {
     margin-top: 1px;
     color: var(--COLOR-2);
-}
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    margin-top: 10px;
-    min-width: 200px;
-    max-width: 350px;
-    padding: 5px;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-input.empty-field {
-    border: 3px solid red;
-}
-
-textarea {
-    font-family: 'Noto Sans', sans-serif;
-    min-width: 250px;
-    margin-top: 10px;
-}
-
-textarea.empty-field {
-    border: 3px solid red;
-}
-
-input[type=submit],
-.reset-form-btn {
-    cursor: pointer;
-    background-color: var(--COLOR-3);
-    font-weight: bold;
-}
-
-#loader {
-    -webkit-animation: spin 2s linear infinite;
-    /* Safari */
-    animation: spin 2s linear infinite;
-    margin-top: 40px;
-
-    -webkit-transition: display 0.3s ease-in-out;
-    -moz-transition: display 0.3s ease-in-out;
-    -ms-transition: display 0.3s ease-in-out;
-    -o-transition: display 0.3s ease-in-out;
-    transition: display 0.3 ease-in-out;
 }

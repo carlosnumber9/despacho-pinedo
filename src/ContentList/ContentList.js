@@ -1,3 +1,4 @@
+import './content-list.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useMediaQuery } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';

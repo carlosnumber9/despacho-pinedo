@@ -1,0 +1,29 @@
+
+@media only screen and (max-width: 600px) {
+    .btn-icon {
+        margin: 30px 10px 30px 10px;
+    }
+}
+
+#buttons {
+    margin: 5px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.selected-section, .button:hover {
+    color: var(--COLOR-3);
+}
+
+#background-btn {
+    margin-right: 20px;
+    margin-left: 20px;
+}

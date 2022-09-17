@@ -1,3 +1,5 @@
+import './personal-info.css';
+
 export const PersonalInfo = () => (
   <div id="personal-info" className="div-default">
     <div id="numbers">
