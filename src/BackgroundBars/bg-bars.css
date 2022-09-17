@@ -1,9 +1,23 @@
-.bg-bar {
+@keyframes bg-bar-move {
+    0% {
+      left: 0;
+    }
+
+    50% {
+        left: 150vw;
+    }
+  
+    to {
+      left: 0;
+    }
+  }
+  
+  .bg-bar {
     position: relative;
 
     top: -50%;
 
-    width: 10vw;
+    width: 200px;
     height: 200vh;
     transform: rotate(15deg);
 

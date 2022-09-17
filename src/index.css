@@ -56,21 +56,6 @@
     }
 }
 
-
-@keyframes bg-bar-move {
-    0% {
-      left: 0;
-    }
-
-    50% {
-        left: 150vw;
-    }
-  
-    to {
-      left: 0;
-    }
-  }
-
 :root {
     --COLOR-1: rgba(106, 4, 29, 0.7);
     --COLOR-2: #DEE2E6;
@@ -200,7 +185,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.button.selected, .button:hover {
+.selected-section, .button:hover {
     color: var(--COLOR-3);
 }
 
