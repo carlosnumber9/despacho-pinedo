@@ -5,10 +5,10 @@ import { Background, Present, Contact } from './Sections';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as emailJS from '@emailjs/browser';
-import { SECTIONS } from './constants';
+import { PUBLIC_KEY, SECTIONS } from './constants';
 
 function App() {
-  emailJS.init(process.env.PUBLIC_KEY);
+  emailJS.init(PUBLIC_KEY);
   return (
     <div className="App">
       <div id="main">

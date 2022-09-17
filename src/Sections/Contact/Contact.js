@@ -4,6 +4,7 @@ import { Success, Error } from '.';
 import { FadeWrapper } from '../../FadeWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../constants';
 
 const LOAD_STATE = {
   NONE: 'NONE',
@@ -34,12 +35,7 @@ export const Contact = () => {
     e.preventDefault();
     setLoadState(LOAD_STATE.LOADING);
     try {
-      sendMail(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
-        mailInfo,
-        process.env.PUBLIC_KEY
-      ).then(
+      sendMail(SERVICE_ID, TEMPLATE_ID, mailInfo, PUBLIC_KEY).then(
         (result) => {
           console.info(
             `Request was sent succesfully. (${result.status}  ${result.text})`
