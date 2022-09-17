@@ -20,7 +20,7 @@ export const ContentList = () => {
             <div id={section.id}>
               <h2
                 className={`button btn-text ${
-                  sectionIsSelected(section) ? 'selected' : ''
+                  sectionIsSelected(section) ? 'selected-section' : ''
                 }`}
               >
                 {section.title}
@@ -31,7 +31,11 @@ export const ContentList = () => {
             </div>
           ) : (
             <div id={section.id}>
-              <FontAwesomeIcon icon={section.icon} size={'3x'} />
+              <FontAwesomeIcon
+                icon={section.icon}
+                size={'3x'}
+                className={sectionIsSelected(section) ? 'selected-section' : ''}
+              />
             </div>
           )}
         </Link>
