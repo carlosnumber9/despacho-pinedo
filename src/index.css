@@ -40,13 +40,17 @@ body {
     }
 
     #name-title {
-        font-size: 2.5em;
+        font-size: 4rem;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 980px) {
     #content {
         max-width: 590px;
+    }
+
+    #name-title {
+        font-size: 2.8rem;
     }
 }
 
@@ -56,7 +60,7 @@ body {
     }
 
     #name-title {
-        font-size: 1.5em;
+        font-size: 1.7rem;
     }
 }
 
@@ -102,4 +106,5 @@ body {
 #subtitle {
     margin-top: 1px;
     color: var(--COLOR-2);
+    font-size: 2em;
 }
