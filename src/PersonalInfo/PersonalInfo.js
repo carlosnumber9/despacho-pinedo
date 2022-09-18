@@ -1,7 +1,7 @@
 import './personal-info.css';
 
 export const PersonalInfo = () => (
-  <div id="personal-info" className="div-default">
+  <div id="personal-info">
     <div id="numbers">
       <div id="home-number">
         <a href="tel:913117423"> Fijo: 913117423 </a>
