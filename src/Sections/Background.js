@@ -4,6 +4,17 @@ export const Background = () => (
   <FadeWrapper>
     <div className="career-era">
       <div className="era-time">
+        <strong>2006-Actualidad</strong>
+      </div>
+      <p>
+        Dedicación fundamentada en la resolución de pleitos de 
+        múltiples disciplinas, especialmente las dirigidas a lo 
+        civil y lo laboral.
+      </p>
+    </div>
+
+    <div className="career-era">
+      <div className="era-time">
         <strong>2004-2006</strong>
       </div>
       <p>
@@ -20,8 +31,7 @@ export const Background = () => (
         <strong>1999-2004</strong>
       </div>
       <p>
-        Responsable jurídico de <strong>asesoría empresarial</strong>. Solicito
-        mi baja en dicha empresa en el mes de noviembre de 2004.
+        Responsable jurídico en <strong>asesoría empresarial</strong>.
       </p>
     </div>
 
@@ -31,7 +41,7 @@ export const Background = () => (
       </div>
       <p>
         Letrado del Servicio de Orientación Jurídica del Excmo. Ayuntamiento de
-        Madrid. Finalizo mis servicios en el mes de octubre.
+        Madrid.
       </p>
     </div>
 
