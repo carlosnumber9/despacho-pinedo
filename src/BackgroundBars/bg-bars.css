@@ -1,47 +1,43 @@
 @keyframes bg-bar-move {
-    0% {
-      left: 0;
-    }
-
-    50% {
-        left: 150vw;
-    }
-  
-    to {
-      left: 0;
-    }
+  0% {
+    left: 0;
   }
-  
-  .bg-bar {
-    position: relative;
 
-    top: -50%;
+  50% {
+    left: 100vw;
+  }
 
-    width: 200px;
-    height: 200vh;
-    transform: rotate(15deg);
-
-    overflow: hidden;
+  to {
+    left: 0;
+  }
 }
 
-#bg-bar-1 {
-    background-color: var(--COLOR-4);
-    animation: bg-bar-move 50s infinite;
-}
-
-#bg-bar-2 {
-    background-color: var(--COLOR-6);
-    animation: bg-bar-move 55s infinite;
-}
-
-#bg-bar-3 {
-    background-color: rgb(47, 47, 47);
-    animation: bg-bar-move 60s infinite;
+.bg-bar {
+  position: absolute;
+  top: -50%;
+  width: 200px;
+  height: 200vh;
+  transform: rotate(15deg);
 }
 
 #bg-bar-wrapper {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: -99;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -99;
+}
+
+#bg-bar-1 {
+  background-color: var(--COLOR-4);
+  animation: bg-bar-move 50s infinite;
+}
+
+#bg-bar-2 {
+  background-color: var(--COLOR-6);
+  animation: bg-bar-move 55s infinite;
+}
+
+#bg-bar-3 {
+  background-color: rgb(47, 47, 47);
+  animation: bg-bar-move 60s infinite;
 }
