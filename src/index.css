@@ -52,7 +52,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     #content {
-        max-width: 90vw;
+        width: 90vw;
     }
 
     #name-title {
@@ -64,7 +64,6 @@ body {
     min-height: 50vh;
     display: flex;
     flex-direction: column;
-
     flex-grow: 3;
 }
 
@@ -78,7 +77,6 @@ body {
     margin: 5px;
     display: flex;
     flex-direction: column;
-    width: 100%;
     box-shadow: var(--DEFAULT-SHADOW);
     font-size: 1.1rem;
 }

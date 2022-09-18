@@ -21,26 +21,24 @@
 
 #loader {
     -webkit-animation: spin 2s linear infinite;
-    /* Safari */
     animation: spin 2s linear infinite;
     margin-top: 40px;
+}
 
-    -webkit-transition: display 0.3s ease-in-out;
-    -moz-transition: display 0.3s ease-in-out;
-    -ms-transition: display 0.3s ease-in-out;
-    -o-transition: display 0.3s ease-in-out;
-    transition: display 0.3 ease-in-out;
+h3 {
+    text-align: center;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 input {
     margin-top: 10px;
     min-width: 200px;
-    max-width: 350px;
+    max-width: 500px;
     padding: 5px;
     font-family: 'Noto Sans', sans-serif;
 }
