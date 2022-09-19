@@ -1,6 +1,6 @@
 import './index.css';
-import { ContentList } from './ContentList/ContentList';
-import { PersonalInfo } from './PersonalInfo/PersonalInfo';
+import { ContentList } from './ContentList';
+import { PersonalInfo } from './PersonalInfo';
 import { Background, Present, Contact } from './Sections';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -8,7 +8,7 @@ import * as emailJS from '@emailjs/browser';
 import { PUBLIC_KEY, SECTIONS } from './constants';
 import { BackgroundBars } from './BackgroundBars';
 import { InitialTransition } from './InitialTransition/InitialTransition';
-import { Title } from './Title/Title';
+import { Title } from './Title';
 
 function App() {
   emailJS.init(PUBLIC_KEY);
