@@ -1,0 +1,16 @@
+
+#subtitle {
+    margin-bottom: 80px;
+    color: var(--COLOR-2);
+    font-size: 2em;
+    text-align: center;
+}
+
+#name-title, #subtitle {
+    position: relative;
+    z-index: 51;
+}
+
+.motion-div-title {
+    position: absolute;
+}

@@ -102,9 +102,3 @@ body {
 .button {
     font-family: 'Prata', serif;
 }
-
-#subtitle {
-    margin-top: 1px;
-    color: var(--COLOR-2);
-    font-size: 2em;
-}

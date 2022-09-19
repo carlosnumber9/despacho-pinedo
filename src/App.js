@@ -7,15 +7,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as emailJS from '@emailjs/browser';
 import { PUBLIC_KEY, SECTIONS } from './constants';
 import { BackgroundBars } from './BackgroundBars';
+import { InitialTransition } from './InitialTransition/InitialTransition';
+import { Title } from './Title/Title';
 
 function App() {
   emailJS.init(PUBLIC_KEY);
   return (
     <div className="App">
+      <InitialTransition />
       <BackgroundBars />
       <div id="main">
-        <h1 id="name-title">Carlos Pinedo Santamaría</h1>
-        <h2 id="subtitle">Abogado</h2>
+        <Title />
         <div id="content">
           <PersonalInfo></PersonalInfo>
           <Router>

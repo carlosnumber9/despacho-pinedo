@@ -1,0 +1,26 @@
+.initial-transition-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.motion-div {
+    position: relative;
+    z-index: 50;
+    width: 100vw;
+    background-color: var(--COLOR-5);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.motion-svg {
+    position: absolute;
+    z-index: 50;
+    display: flex;
+}
