@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const Error = ({ onResetForm }) => (
-  <div id="request-ko" className="career-era">
+  <>
     <p>
       Ha ocurrido un error al enviar la petición. Por favor, inténtelo de nuevo
       o contacte por algún otro medio de comunicación.
@@ -15,7 +15,7 @@ export const Error = ({ onResetForm }) => (
     >
       Reiniciar el formulario
     </button>
-  </div>
+  </>
 );
 
 Error.propTypes = {
