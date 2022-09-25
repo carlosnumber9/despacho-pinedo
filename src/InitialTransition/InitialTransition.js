@@ -1,9 +1,11 @@
 import './initial-transition.css';
 import { motion } from 'framer-motion';
+import { SECTIONS } from '../constants';
+import { sectionIsSelected } from '../utils';
 
 const blackBox = {
   initial: {
-    height: '100vh',
+    height: '120vh',
     bottom: 0,
   },
   animate: {
@@ -16,13 +18,14 @@ const blackBox = {
   },
 };
 
-export const InitialTransition = () => (
-  <div className="initial-transition-main">
-    <motion.div
-      className="motion-div"
-      initial="initial"
-      animate="animate"
-      variants={blackBox}
-    />
-  </div>
-);
+export const InitialTransition = () =>
+  sectionIsSelected(SECTIONS.PRESENT) && (
+    <div className="initial-transition-main">
+      <motion.div
+        className="motion-div"
+        initial="initial"
+        animate="animate"
+        variants={blackBox}
+      />
+    </div>
+  );
