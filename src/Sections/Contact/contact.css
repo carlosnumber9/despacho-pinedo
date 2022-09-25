@@ -37,7 +37,7 @@ h3 {
 
 input {
     margin-top: 10px;
-    min-width: 200px;
+    width: 200px;
     max-width: 500px;
     padding: 5px;
     font-family: 'Noto Sans', sans-serif;
@@ -57,10 +57,33 @@ textarea.empty-field {
     border: 3px solid red;
 }
 
-input[type=submit],
+button[type=submit],
+.reset-form-btn {
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 40px;
+}
+
+.enabled,
 .reset-form-btn {
     cursor: pointer;
     background-color: var(--COLOR-3);
-    font-weight: bold;
 }
 
+.disabled {
+    background-color: var(--COLOR-6);
+}
+
+.submit-loading, .submit-ok {
+    height: 90px !important;
+    width: 90px !important;
+    border-radius: 100%;
+}
+
+.submit-ok {
+    background-color: green;
+}
