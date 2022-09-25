@@ -1,7 +1,6 @@
 import './index.css';
 import { ContentList } from './ContentList';
 import { PersonalInfo } from './PersonalInfo';
-import { Background, Present, Contact } from './Sections';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as emailJS from '@emailjs/browser';
@@ -12,6 +11,7 @@ import { Title } from './Title';
 
 function App() {
   emailJS.init(PUBLIC_KEY);
+
   return (
     <div className="App">
       <InitialTransition />
@@ -24,21 +24,14 @@ function App() {
             <ContentList></ContentList>
             <AnimatePresence mode="wait">
               <Routes>
-                <Route
-                  exact
-                  path={SECTIONS.PRESENT.path}
-                  element={<Present />}
-                ></Route>
-                <Route
-                  exact
-                  path={SECTIONS.BACKGROUND.path}
-                  element={<Background />}
-                ></Route>
-                <Route
-                  exact
-                  path={SECTIONS.CONTACT.path}
-                  element={<Contact />}
-                ></Route>
+                {Object.values(SECTIONS).map((section) => (
+                  <Route
+                    key={section.path}
+                    exact
+                    path={section.path}
+                    element={section.component}
+                  />
+                ))}
               </Routes>
             </AnimatePresence>
           </Router>

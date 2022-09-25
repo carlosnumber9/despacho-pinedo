@@ -12,5 +12,5 @@ export const FadeWrapper = ({ children }) => (
 );
 
 FadeWrapper.propTypes = {
-    children: PropTypes.node
+  children: PropTypes.node,
 };

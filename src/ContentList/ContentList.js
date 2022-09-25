@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useMediaQuery } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import { SECTIONS } from '../constants';
+import PropTypes from 'prop-types';
 
 export const ContentList = () => {
   const location = useLocation();
@@ -18,7 +19,9 @@ export const ContentList = () => {
           style={{ textDecoration: 'none', color: 'unset' }}
         >
           {useMediaQuery('(min-width:600px)') ? (
-            <div id={section.id}>
+            <div
+              id={section.id}
+            >
               <h2
                 className={`button btn-text ${
                   sectionIsSelected(section) ? 'selected-section' : ''
@@ -44,3 +47,7 @@ export const ContentList = () => {
     </div>
   );
 };
+
+ContentList.propTypes = {
+  onSectionSelection: PropTypes.func
+}
