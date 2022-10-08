@@ -1,14 +1,8 @@
-import { useEffect, useRef } from 'react';
 import { FadeWrapper } from '../FadeWrapper';
-import { scrollToBottom } from '../utils';
+import { useScrollToBottom } from '../utils';
 
 export const Background = () => {
-  const firstRender = useRef(true);
-
-  useEffect(() => {
-    if (!firstRender.current) scrollToBottom();
-    firstRender.current = false;
-  });
+  useScrollToBottom();
 
   return (
     <FadeWrapper>

@@ -1,11 +1,11 @@
 import './contact.css';
 import { send as sendMail } from '@emailjs/browser';
-import { useEffect, useRef, useState } from 'react';
 import { FadeWrapper } from '../../FadeWrapper';
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../constants';
-import { scrollToBottom } from '../../utils';
+import { scrollToBottom, useScrollToBottom } from '../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const LOAD_STATE = {
   NONE: 'NONE',
@@ -26,18 +26,13 @@ export const Contact = () => {
   const [mailInfo, setMailInfo] = useState(DEFAULT_MAIL_INFO);
   const [loadState, setLoadState] = useState(LOAD_STATE.NONE);
 
-  const firstRender = useRef(true);
+  useScrollToBottom();
 
   const formIsValid = () =>
     mailInfo.name &&
     mailInfo.phone &&
     mailInfo.email &&
     (mailInfo.subject || mailInfo.message);
-
-  useEffect(() => {
-    if (!firstRender.current) scrollToBottom();
-    firstRender.current = false;
-  });
 
   const resetForm = () => {
     setMailInfo(DEFAULT_MAIL_INFO);
@@ -73,11 +68,6 @@ export const Contact = () => {
       }
     }
   };
-
-  // const resetForm = () => {
-  //   setMailInfo(DEFAULT_MAIL_INFO);
-  //   setLoadState(LOAD_STATE.NONE);
-  // };
 
   const getSubmitBtnStateClass = () => {
     switch (loadState) {
